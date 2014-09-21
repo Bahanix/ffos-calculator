@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "name": "Calculator",
+  "description": "A pretty and simple calculator",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/images/60.png",
+    "128": "/images/128.png",
+    "256": "/images/256.png"
+  },
+  "developer": {
+    "name": "Julien Grillot",
+    "url": "http://github.com/Bahanix/ffos-calculator"
+  },
+  "installs_allowed_from": ["*"],
+  "csp": "allow 'self'; object-src 'none'",
+  "locales": {
+    "fr": {
+      "description": "Une calculatrice jolie et simple"
+    }
+  },
+  "default_locale": "en"
+}
