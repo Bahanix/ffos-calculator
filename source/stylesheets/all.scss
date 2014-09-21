@@ -1,8 +1,12 @@
 @import "foundation";
 
-body, .columns {
+.columns {
   height: 100%;
+  .button, input {
+    font-family: 'Fira Sans', sans-serif;
+  }
 }
+
 
 .display {
   height: 30%;
