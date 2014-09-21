@@ -2,7 +2,12 @@
 
 $(document).ready ->
   humanize = (number) ->
-    (Math.round(number * 100000) / 100000).toString().replace(new RegExp("-", "g"), "−")
+    console.log(typeof number);
+    if typeof number is 'object'
+      number.value = math.round(number.value, 6)
+    if typeof number is 'number'
+      number = math.round(number, 6)
+    number.toString().replace(new RegExp("-", "g"), "−")
 
   compile = (string) ->
     string.replace(new RegExp("×", "g"), "*").replace(new RegExp("−", "g"), "-").replace(new RegExp("÷", "g"), "/")
