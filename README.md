@@ -10,7 +10,7 @@
 
 ## Roadmap
 
-* More operators and functions
+* JS polishing
 * CSS polishing
 * Better app description (and name?)
 * Better icons

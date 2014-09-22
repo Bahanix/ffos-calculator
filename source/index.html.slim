@@ -6,49 +6,11 @@
     .small-12.columns
       input.result type="text" readonly="readonly"
 
-.input
-  .row.collapse
-    .small-3.columns
-      .button.open= "("
-    .small-3.columns
-      .button.close= ")"
-    .small-3.columns
-      .button.operator= "^"
-    .small-3.columns
-      .button.operator= "÷"
-  .row.collapse
-    .small-3.columns
-      .button.digit= "7"
-    .small-3.columns
-      .button.digit= "8"
-    .small-3.columns
-      .button.digit= "9"
-    .small-3.columns
-      .button.operator= "×"
-  .row.collapse
-    .small-3.columns
-      .button.digit= "4"
-    .small-3.columns
-      .button.digit= "5"
-    .small-3.columns
-      .button.digit= "6"
-    .small-3.columns
-      .button.operator= "−"
-  .row.collapse
-    .small-3.columns
-      .button.digit= "1"
-    .small-3.columns
-      .button.digit= "2"
-    .small-3.columns
-      .button.digit= "3"
-    .small-3.columns
-      .button.operator= "+"
-  .row.collapse
-    .small-3.columns
-      .button.digit= "0"
-    .small-3.columns
-      .button.digit= "."
-    .small-3.columns
-      .button.backspace= "←"
-    .small-3.columns
-      .button.equal= "="
+.slider
+  == partial "pages/base"
+  == partial "pages/units"
+  == partial "pages/arithmetic"
+  / == partial "pages/statistics"
+  / == partial "pages/probability"
+  / == partial "pages/trigonometry"
+  / == partial "pages/matrix"
