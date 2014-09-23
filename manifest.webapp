@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.21",
   "name": "Calculator",
   "description": "A pretty and simple calculator",
   "launch_path": "/index.html",
