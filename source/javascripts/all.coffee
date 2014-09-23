@@ -1,88 +1,98 @@
-//= require zepto
 //= require idangerous.swiper.js
 //= require math
 //= require_tree .
 
-$(document).ready ->
-  $expression = $(".expression")
-  $result = $(".result")
-  operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
-  backspaceHolded = null
-  restart = null
-  swiping = false
+$expression = document.getElementById("expression")
+$result = document.getElementById("result")
 
-  mySwiper = new Swiper '.swiper-container',
-    loop:true,
-    resistance: '50%',
-    onSlideChangeStart: ->
-      swiping = true
-    onSlideChangeEnd: ->
-      swiping = false
+operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
+backspaceHolded = null
+restart = null
+swiping = false
 
-  humanize = (number) ->
-    math.format(number, 6).toString().replace(new RegExp("-", "g"), "−").replace(new RegExp("deg", "g"), "°")
+mySwiper = new Swiper '.swiper-container',
+  loop: true,
+  moveStartThreshold: 32,
+  resistance: false,
+  onSlideChangeStart: ->
+    swiping = true
+  onSlideChangeEnd: ->
+    swiping = false
 
-  compile = (string) ->
-    string.
-      replace(new RegExp("×", "g"), "*").
-      replace(new RegExp("−", "g"), "-").
-      replace(new RegExp("÷", "g"), "/").
-      replace(new RegExp("√", "g"), "sqrt").
-      replace(new RegExp("π", "g"), "PI").
-      replace(new RegExp("rand", "g"), "random()").
-      replace(new RegExp("°", "g"), "deg")
+humanize = (number) ->
+  math.format(number, 6).toString().replace(new RegExp("-", "g"), "−").replace(new RegExp("deg", "g"), "°")
 
-  backspaceHolding = ->
-    $expression.val("")
+compile = (string) ->
+  string.
+    replace(new RegExp("×", "g"), "*").
+    replace(new RegExp("−", "g"), "-").
+    replace(new RegExp("÷", "g"), "/").
+    replace(new RegExp("√", "g"), "sqrt").
+    replace(new RegExp("π", "g"), "PI").
+    replace(new RegExp("rand", "g"), "random()").
+    replace(new RegExp("°", "g"), "deg")
 
-  $expression.on "keypress", (e) ->
-    $(".equal").first().click() if e.which is 13
+backspaceHolding = ->
+  $expression.value = ""
 
-  $(".digit").on "click", ->
+$expression.addEventListener "keypress", (e) ->
+  result = math.eval compile($expression.value)
+  $result.value = humanize(result)
+  restart = result
+
+for e in document.getElementsByClassName("digit")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val "" if restart
-    $expression.val $expression.val() + @textContent
+    $expression.value = "" if restart
+    $expression.value += @textContent
     restart = null
 
-  $(".function").on "click", ->
+for e in document.getElementsByClassName("function")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val "" if restart
-    $expression.val $expression.val() + @textContent + "("
+    $expression.value = "" if restart
+    $expression.value += @textContent + "("
     restart = null
 
-  $(".space").on "click", ->
+for e in document.getElementsByClassName("space")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val $expression.val() + " "
+    $expression.value += " "
     restart = null
 
-  $(".unit").on "click", ->
+for e in document.getElementsByClassName("unit")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val humanize(restart) if restart
-    $expression.val $expression.val() + @textContent + " "
+    $expression.value = humanize(restart) if restart
+    $expression.value += @textContent + " "
     restart = null
 
-  $(".operator").on "click", ->
+for e in document.getElementsByClassName("operator")
+  e.addEventListener "click", ->
     return if swiping
-    if !!$expression.val()
-      $expression.val humanize(restart) if restart
-      if $expression.val().slice(-1) in operators
-        $expression.val $expression.val().slice(0, -1) + @textContent
+    if !!$expression.value
+      $expression.value = humanize(restart) if restart
+      if $expression.value.slice(-1) in operators
+        $expression.value = $expression.value.slice(0, -1) + @textContent
       else
-        $expression.val $expression.val() + @textContent
+        $expression.value += @textContent
       restart = null
 
-  $(".clear").on "click", ->
+for e in document.getElementsByClassName("clear")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val ""
+    $expression.value = ""
     restart = null
 
-  $(".backspace").on "click", ->
+for e in document.getElementsByClassName("backspace")
+  e.addEventListener "click", ->
     return if swiping
-    $expression.val $expression.val().slice(0, -1)
+    $expression.value = $expression.value.slice(0, -1)
     restart = null
 
-  $(".equal").on "click", ->
+for e in document.getElementsByClassName("equal")
+  e.addEventListener "click", ->
     return if swiping
-    result = math.eval(compile($expression.val()))
-    $result.val humanize(result)
+    result = math.eval compile($expression.value)
+    $result.value = humanize(result)
     restart = result
