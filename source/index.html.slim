@@ -6,11 +6,8 @@
     .small-12.columns
       input.result type="text" readonly="readonly"
 
-.slider
-  == partial "pages/base"
-  == partial "pages/units"
-  == partial "pages/arithmetic"
-  / == partial "pages/statistics"
-  / == partial "pages/probability"
-  / == partial "pages/trigonometry"
-  / == partial "pages/matrix"
+.swiper-container
+  .swiper-wrapper
+    .swiper-slide == partial "pages/base"
+    .swiper-slide == partial "pages/units"
+    .swiper-slide == partial "pages/arithmetic"

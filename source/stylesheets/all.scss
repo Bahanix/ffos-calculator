@@ -1,6 +1,6 @@
 @import "normalize";
 @import "foundation";
-@import "slick";
+@import "idangerous.swiper";
 
 body {
   overflow: hidden;
@@ -28,8 +28,16 @@ body {
   }
 }
 
-.input {
+.swiper-container {
   height: 70%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.input {
+  height: 100%;
   .row {
     height: 20%;
   }
@@ -43,10 +51,3 @@ body {
   }
 }
 
-.input {
-  display: none;
-}
-
-.page-3 {
-  display: block;
-}

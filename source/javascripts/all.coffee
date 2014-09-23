@@ -1,6 +1,6 @@
-//= require jquery
+//= require zepto
+//= require idangerous.swiper.js
 //= require math
-//= require slick
 //= require_tree .
 
 $(document).ready ->
@@ -11,14 +11,13 @@ $(document).ready ->
   restart = null
   swiping = false
 
-  $('.slider').slick(
-    dots: false,
-    arrows: false,
-    onBeforeChange: ->
+  mySwiper = new Swiper '.swiper-container',
+    loop:true,
+    resistance: '50%',
+    onSlideChangeStart: ->
       swiping = true
-    onAfterChange: ->
+    onSlideChangeEnd: ->
       swiping = false
-  )
 
   humanize = (number) ->
     math.format(number, 6).toString().replace(new RegExp("-", "g"), "−").replace(new RegExp("deg", "g"), "°")
@@ -37,7 +36,7 @@ $(document).ready ->
     $expression.val("")
 
   $expression.on "keypress", (e) ->
-    $(".equal").click() if e.which is 13
+    $(".equal").first().click() if e.which is 13
 
   $(".digit").on "click", ->
     return if swiping
@@ -58,7 +57,7 @@ $(document).ready ->
 
   $(".unit").on "click", ->
     return if swiping
-    $expression.val "" if restart
+    $expression.val humanize(restart) if restart
     $expression.val $expression.val() + @textContent + " "
     restart = null
 
