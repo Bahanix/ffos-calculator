@@ -31,9 +31,6 @@ compile = (string) ->
     replace(new RegExp("rand", "g"), "random()").
     replace(new RegExp("°", "g"), "deg")
 
-backspaceHolding = ->
-  $expression.value = ""
-
 $expression.addEventListener "keypress", (e) ->
   result = math.eval compile($expression.value)
   $result.value = humanize(result)
