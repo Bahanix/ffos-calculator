@@ -1,18 +1,21 @@
 # Firefox OS Calculator
 
-[Test the app!](http://calculator.chatchan.us/)
+* [Test the app on your browser](http://calculator.chatchan.us/)
+* [Install the app (Firefox Marketplace)](https://marketplace.firefox.com/app/ffos-calculator/)
+
+![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/thumbs/151/151877.png)
 
 ## Tools
 
 * [Math.js](http://mathjs.org/) for expression parsing
-* [Zurb Foundation](http://foundation.zurb.com/) for flat and responsive design
+* [Zurb Foundation](http://foundation.zurb.com/) for grid, forms and buttons modules
 * [MiddleMan](http://middlemanapp.com/) for preprocessing
 
-## Roadmap
+## TODO?
 
 * JS polishing
 * CSS polishing
-* Better app description (and name?)
+* Better app description
 * Better icons
 * Translations
 
@@ -31,14 +34,14 @@ Any help would be greatly appreciated!
 * `middleman server` to test the app in your browser
 * `middleman build` to compile everything
 
-## Test with your device
+## Test with your device or simulator
 
-* Download and unzip [Calculator package](https://github.com/Bahanix/ffos-calculator/blob/master/build/calculator.zip)
 * Download and install [Firefox Nightly](https://nightly.mozilla.org/)
-* Firefox > Open menu > Developer > WebIDE
-* Open Packaged App
-* Select the directory where you unziped the package
-* Install and run on your Firefox OS device
+* Firefox > Developer > WebIDE
+* Select your device or simulator
+* Open Hosted App
+* URL to your `manifest.webapp`
+* Run
 
 ## Licence
 
