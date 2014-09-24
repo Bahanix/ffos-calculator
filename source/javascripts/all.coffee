@@ -6,7 +6,6 @@ $expression = document.getElementById("expression")
 $result = document.getElementById("result")
 
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
-backspaceHolded = null
 restart = null
 swiping = false
 

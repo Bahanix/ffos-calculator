@@ -1,7 +1,7 @@
 {
-  "version": "0.4",
+  "version": "0.4.2",
   "name": "Calculator",
-  "description": "A pretty and simple calculator",
+  "description": "A pretty and simple calculator with units conversion.",
   "launch_path": "/index.html",
   "icons": {
     "60": "/images/60.png",

@@ -30,7 +30,6 @@ Any help would be greatly appreciated!
 * `bundle install` to install dependencies
 * `middleman server` to test the app in your browser
 * `middleman build` to compile everything
-* `zip -r build/calculator.zip build/*` to build the package
 
 ## Test with your device
 
