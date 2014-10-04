@@ -9,6 +9,7 @@ $result = document.getElementById("result")
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
 restart = null
 swiping = false
+history = []
 
 mySwiper = new Swiper '.swiper-container',
   loop: true,
@@ -33,45 +34,61 @@ compile = (string) ->
     replace(new RegExp("°", "g"), "deg")
 
 doDigit = (button) ->
-  $expression.value = "" if restart
-  $expression.value += button.textContent
-  restart = null
+  doClear() if restart
+  string = button.textContent
+  $expression.value += string
+  history.push string
 
 doFunction = (button) ->
-  $expression.value = "" if restart
-  $expression.value += button.textContent + "("
+  doClear() if restart
+  string = button.textContent + "("
+  $expression.value += string
+  history.push string
+
+doSpace = ->
+  string = " "
+  $expression.value += string
+  history.push string
   restart = null
 
-doSpace = (button) ->
-  $expression.value += " "
+getResult = ->
+  string = humanize(restart)
+  $expression.value = string
+  history = [string]
   restart = null
 
 doUnit = (button) ->
-  $expression.value = humanize(restart) if restart
-  $expression.value += button.textContent + " "
-  restart = null
+  getResult() if restart
+  string = button.textContent + " "
+  $expression.value += string
+  history.push string
 
 doOperator = (button) ->
   if !!$expression.value
-    $expression.value = humanize(restart) if restart
-    if $expression.value.slice(-1) in operators
-      $expression.value = $expression.value.slice(0, -1) + button.textContent
-    else
-      $expression.value += button.textContent
-    restart = null
+    getResult() if restart
+    if history[history.length - 1] in operators
+      doBackspace()
+    string = button.textContent
+    $expression.value += string
+    history.push string
 
-doClear = (button) ->
+doClear = ->
   $expression.value = ""
+  history = []
   restart = null
 
-doBackspace = (button) ->
-  $expression.value = $expression.value.slice(0, -1)
+doBackspace = ->
+  last = history.pop()
+  $expression.value = $expression.value.slice(0, 0 - last.length)
   restart = null
 
-doEqual = (button) ->
-  result = math.eval compile($expression.value)
-  $result.value = humanize(result)
-  restart = result
+doEqual = ->
+  try
+    result = math.eval compile($expression.value)
+    $result.value = humanize(result)
+    restart = result
+  catch
+    $result.value = "Error"
 
 $buttons.addEventListener "click", (e) ->
   return if swiping
