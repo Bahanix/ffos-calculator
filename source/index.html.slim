@@ -1,12 +1,12 @@
 .display
   .row.collapse
     .small-12.columns
-      input#expression type="text"
+      input#expression type="text" readonly="readonly"
   .row.collapse
     .small-12.columns
       input#result type="text" readonly="readonly"
 
-.swiper-container
+#buttons.swiper-container
   .swiper-wrapper
     .swiper-slide == partial "pages/base"
     .swiper-slide == partial "pages/units"

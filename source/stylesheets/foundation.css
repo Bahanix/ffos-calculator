@@ -1521,7 +1521,6 @@ textarea {
   textarea[disabled],
   textarea[readonly], fieldset[disabled]
   textarea {
-    background-color: #DDDDDD;
     cursor: default; }
   input[type="text"].radius,
   input[type="password"].radius,
