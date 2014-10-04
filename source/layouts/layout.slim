@@ -1,16 +1,16 @@
 /! Fork me on Github: https://github.com/Bahanix/ffos-calculator
 doctype html
-html manifest="manifest.appcache"
+html lang="en" dir="ltr" manifest="manifest.appcache"
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-
-    title == data.page.title || "Calculator"
-
+    meta name="description" content="A pretty and simple calculator with units conversion."
+    meta name="keywords" content="calc, calculator, calculatrice, app, application, webapp, offline, unit, conversion"
+    meta name="author" content="Julien Grillot"
+    link rel="shortcut icon" href="#{image_path '256.png'}"
+    title == "Calculator"
     == stylesheet_link_tag "all"
 
   body class="#{page_classes}"
-
     == yield
-
     == javascript_include_tag  "all"
