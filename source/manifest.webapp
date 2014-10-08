@@ -1,10 +1,12 @@
 {
-  "version": "0.6",
+  "version": "0.6.1",
   "name": "Calculator",
   "description": "A pretty and simple calculator with units conversion.",
   "launch_path": "/index.html",
   "icons": {
+    "32": "/images/32.png",
     "60": "/images/60.png",
+    "64": "/images/64.png",
     "128": "/images/128.png",
     "256": "/images/256.png"
   },
