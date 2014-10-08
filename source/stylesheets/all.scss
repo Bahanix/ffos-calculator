@@ -5,6 +5,7 @@
   height: 100%;
   .button, input {
     font-family: 'Fira Sans', sans-serif;
+    border-radius: 0;
     margin: 0;
   }
 }
@@ -18,10 +19,16 @@
     background: transparent;
     background-color: #eee;
     text-align: right;
-    font-size: 12vh;
+    font-size: 10vh;
     width: 100%;
     height: 100%;
+    padding: 0;
+    padding-right: 0.5rem;
   }
+}
+
+#expression {
+  border-bottom: 0;
 }
 
 .swiper-container {
@@ -45,7 +52,6 @@
   }
   .button {
     background: #333;
-    border-radius: 0;
     border: 1px #222 solid;
     font-size: 6vh;
     line-height: 14vh;

@@ -3,7 +3,7 @@
 * [Test the app on your browser](http://calculator.chatchan.us/)
 * [Install the app (Firefox Marketplace)](https://marketplace.firefox.com/app/ffos-calculator/)
 
-![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/thumbs/151/151877.png)
+![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/full/153/153507.png)
 
 ## Tools
 
