@@ -1,46 +1,44 @@
 .input
   .row.collapse
+    .small-6.columns
+      button.button.clear = "C"
     .small-3.columns
-      button.button.operator = ","
+      button.button.digit = "("
     .small-3.columns
       button.button.digit = ")"
-    .small-3.columns
-      button.button.operator = "^"
-    .small-3.columns
-      button.button.operator = "%"
-  .row.collapse
-    .small-3.columns
-      button.button.digit = "e^"
-    .small-3.columns
-      button.button.function = "log"
-    .small-3.columns
-      button.button.digit = "!"
-    .small-3.columns
-      button.button.function = "√"
   .row.collapse
     .small-3.columns
       button.button.function = "sin"
     .small-3.columns
-      button.button.function = "asin"
-    .small-3.columns
-      button.button.digit = "π"
-    .small-3.columns
-      button.button.function = "gcd"
-  .row.collapse
-    .small-3.columns
       button.button.function = "cos"
-    .small-3.columns
-      button.button.function = "acos"
-    .small-3.columns
-      button.button.digit = "rand"
-    .small-3.columns
-      button.button.clear = "clr"
-  .row.collapse
     .small-3.columns
       button.button.function = "tan"
     .small-3.columns
-      button.button.function = "atan"
+      button.button.digit = "π"
+  .row.collapse
     .small-3.columns
-      button.button.backspace = "←"
+      button.button.function = "ln"
     .small-3.columns
+      button.button.function = "log"
+    .small-3.columns
+      button.button.digit = "e"
+    .small-3.columns
+      button.button.operator = "^"
+  .row.collapse.double
+    .small-9.columns
+      .row.collapse.half
+        .small-4.columns
+          button.button.operator = "%"
+        .small-4.columns
+          button.button.digit = "!"
+        .small-4.columns
+          button.button.function = "√"
+      .row.collapse.half
+        .small-4.columns
+          button.button.digit = "dice"
+        .small-4.columns
+          button.button.digit = "rand"
+        .small-4.columns
+          button.button.backspace = "←"
+    .small-3.columns.double
       button.button.equal = "="

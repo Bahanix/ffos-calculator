@@ -21,17 +21,22 @@ mySwiper = new Swiper '.swiper-container',
     swiping = false
 
 humanize = (number) ->
-  math.format(number, 6).toString().replace(new RegExp("-", "g"), "−").replace(new RegExp("deg", "g"), "°")
+  math.format(number, 6).toString().
+    replace(/-/g, "−").
+    replace(/deg/g, "°")
 
 compile = (string) ->
   string.
-    replace(new RegExp("×", "g"), "*").
-    replace(new RegExp("−", "g"), "-").
-    replace(new RegExp("÷", "g"), "/").
-    replace(new RegExp("√", "g"), "sqrt").
-    replace(new RegExp("π", "g"), "PI").
-    replace(new RegExp("rand", "g"), "random()").
-    replace(new RegExp("°", "g"), "deg")
+    replace(/×/g, "*").
+    replace(/−/g, "-").
+    replace(/÷/g, "/").
+    replace(/√/g, "sqrt").
+    replace(/π/g, "PI").
+    replace(/rand/g, "random()").
+    replace(/dice/g, "ceil(6*random())").
+    replace(/log/g, "log10").
+    replace(/ln/g, "log").
+    replace(/°/g, "deg")
 
 doDigit = (button) ->
   doClear() if restart

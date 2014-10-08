@@ -36,10 +36,17 @@
   height: 100%;
   .row {
     height: 20%;
+    &.double {
+      height: 40%;
+    }
+    &.half {
+      height: 50%;
+    }
   }
   .button {
     background: #333;
     border-radius: 0;
+    border: 1px #222 solid;
     font-size: 6vh;
     line-height: 14vh;
     width: 100%;

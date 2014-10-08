@@ -1,9 +1,7 @@
 .input
   .row.collapse
-    .small-3.columns
-      button.button.digit = "("
-    .small-3.columns
-      button.button.digit = ")"
+    .small-6.columns
+      button.button.clear = "C"
     .small-3.columns
       button.button.operator = "÷"
     .small-3.columns
@@ -26,21 +24,21 @@
       button.button.digit = "6"
     .small-3.columns
       button.button.operator = "+"
-  .row.collapse
-    .small-3.columns
-      button.button.digit = "1"
-    .small-3.columns
-      button.button.digit = "2"
-    .small-3.columns
-      button.button.digit = "3"
-    .small-3.columns
-      button.button.clear = "clr"
-  .row.collapse
-    .small-3.columns
-      button.button.digit = "0"
-    .small-3.columns
-      button.button.digit = "."
-    .small-3.columns
-      button.button.backspace = "←"
-    .small-3.columns
+  .row.collapse.double
+    .small-9.columns
+      .row.collapse.half
+        .small-4.columns
+          button.button.digit = "1"
+        .small-4.columns
+          button.button.digit = "2"
+        .small-4.columns
+          button.button.digit = "3"
+      .row.collapse.half
+        .small-4.columns
+          button.button.digit = "0"
+        .small-4.columns
+          button.button.digit = "."
+        .small-4.columns
+          button.button.backspace = "←"
+    .small-3.columns.double
       button.button.equal = "="
