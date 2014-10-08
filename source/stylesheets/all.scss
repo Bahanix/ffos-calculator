@@ -5,6 +5,7 @@
   height: 100%;
   .button, input {
     font-family: 'Fira Sans', sans-serif;
+    margin: 0;
   }
 }
 
@@ -14,6 +15,8 @@
     height: 50%;
   }
   input {
+    background: transparent;
+    background-color: #eee;
     text-align: right;
     font-size: 12vh;
     width: 100%;
@@ -35,10 +38,15 @@
     height: 20%;
   }
   .button {
+    background: #333;
+    border-radius: 0;
     font-size: 6vh;
     line-height: 14vh;
     width: 100%;
     height: 100%;
     padding: 0;
+  }
+  .button:active {
+    background: #222;
   }
 }
