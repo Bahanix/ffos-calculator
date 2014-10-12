@@ -1,5 +1,5 @@
 {
-  "version": "0.7.8",
+  "version": "0.7.10",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -20,7 +20,7 @@
   "locales": {
     "de": {
       "name": "Rechner",
-      "description": "Ein wissenschaftlicher Rechner, einfach und effektiv, einschließlich Einheitenumrechner"
+      "description": "Ein wissenschaftlicher Rechner, einfach und effektiv, einschließlich Einheitenumrechner."
     },
     "el": {
       "name": "Αριθμομηχανή",
@@ -46,9 +46,17 @@
       "name": "계산기",
       "description": "단위 환산 기능을 갖는 간단하고 효과적인 계산기."
     },
+    "mk": {
+      "name": "Kalkulator",
+      "description": "Едноставен и симпатичен научен калкулатор со можност за промена на единици мерки."
+    },
     "no": {
       "name": "Kalkulator",
-      "description": "En enkel og effektiv vitenskapelig kalkulator, med konvertering av enheter"
+      "description": "En enkel og effektiv vitenskapelig kalkulator, med konvertering av enheter."
+    },
+    "pl": {
+      "name": "Kalkulator",
+      "description": "Ładny i prosty kalkulator naukowy z przeliczaniem jednostek."
     },
     "pt": {
       "name": "Calculadora",
