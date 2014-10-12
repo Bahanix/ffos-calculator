@@ -1,5 +1,5 @@
 {
-  "version": "0.7.10",
+  "version": "0.7.12",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -38,6 +38,10 @@
       "name": "Calculatrice",
       "description": "Une calculatrice scientifique jolie et simple avec conversion des unités de mesure."
     },
+    "he": {
+      "name": "מחשבון",
+      "description": "מחשבון מדעי יפה ופשוט עם המרה של יחידות"
+    },
     "it": {
       "name": "Calcolatrice",
       "description": "Una calcolatrice scientifica, piacevole e semplice, è compreso la conversione di unità di misura."
@@ -47,7 +51,7 @@
       "description": "단위 환산 기능을 갖는 간단하고 효과적인 계산기."
     },
     "mk": {
-      "name": "Kalkulator",
+      "name": "Калкулатор",
       "description": "Едноставен и симпатичен научен калкулатор со можност за промена на единици мерки."
     },
     "no": {

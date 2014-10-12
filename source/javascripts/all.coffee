@@ -1,5 +1,6 @@
 //= require idangerous.swiper.js
 //= require l10n
+//= require localizations
 //= require math
 //= require_tree .
 
@@ -11,6 +12,9 @@ operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
 restart = null
 swiping = false
 history = []
+
+document.title = 'name'.toLocaleString()
+document.documentElement.lang = String.locale || document.documentElement.lang
 
 mySwiper = new Swiper '.swiper-container',
   loop: true,
@@ -94,7 +98,7 @@ doEqual = ->
     $result.value = humanize(result)
     restart = result
   catch
-    $result.value = _('error')
+    $result.value = 'error'.toLocaleString()
 
 $buttons.addEventListener "click", (e) ->
   return if swiping
