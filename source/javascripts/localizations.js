@@ -3,6 +3,10 @@ String.toLocaleString({
     "name": "Calculator",
     "error": "Error"
   },
+  "da": {
+    "name": "Lommeregner",
+    "error": "Fejl"
+  },
   "de": {
     "name": "Rechner",
     "error": "Fehler"

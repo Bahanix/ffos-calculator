@@ -1,5 +1,5 @@
 {
-  "version": "0.7.12",
+  "version": "0.7.13",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -18,9 +18,13 @@
   "installs_allowed_from": ["*"],
   "csp": "allow 'self'; object-src 'none'",
   "locales": {
+    "da": {
+      "name": "Lommeregner",
+      "description": "En flot og simpel videnskabelig lommeregner med enhedskonvertering."
+    },
     "de": {
       "name": "Rechner",
-      "description": "Ein wissenschaftlicher Rechner, einfach und effektiv, einschließlich Einheitenumrechner."
+      "description": "Ein einfaches und effektives wissenschaftlicher Rechner, mit einschließlichigen Einheitenumrechner."
     },
     "el": {
       "name": "Αριθμομηχανή",
