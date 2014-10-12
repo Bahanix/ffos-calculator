@@ -817,10 +817,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // handle special cases
 	  if (value === Infinity) {
-	    return 'Infinity';
+	    return '+∞';
 	  }
 	  else if (value === -Infinity) {
-	    return '-Infinity';
+	    return '−∞';
 	  }
 	  else if (isNaN(value)) {
 	    return 'NaN';

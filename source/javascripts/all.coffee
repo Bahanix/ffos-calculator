@@ -1,4 +1,5 @@
 //= require idangerous.swiper.js
+//= require l10n
 //= require math
 //= require_tree .
 
@@ -27,6 +28,7 @@ humanize = (number) ->
 
 compile = (string) ->
   string.
+    replace(/→/g, "to").
     replace(/×/g, "*").
     replace(/−/g, "-").
     replace(/÷/g, "/").
@@ -69,13 +71,12 @@ doUnit = (button) ->
   history.push string
 
 doOperator = (button) ->
-  if !!$expression.value
-    getResult() if restart
-    if history[history.length - 1] in operators
-      doBackspace()
-    string = button.textContent
-    $expression.value += string
-    history.push string
+  getResult() if restart
+  if history[history.length - 1] in operators
+    doBackspace()
+  string = button.textContent
+  $expression.value += string
+  history.push string
 
 doClear = ->
   $expression.value = ""
@@ -93,7 +94,7 @@ doEqual = ->
     $result.value = humanize(result)
     restart = result
   catch
-    $result.value = "Error"
+    $result.value = _('error')
 
 $buttons.addEventListener "click", (e) ->
   return if swiping
