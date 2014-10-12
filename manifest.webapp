@@ -1,7 +1,7 @@
 {
-  "version": "0.6.9",
+  "version": "0.7.6",
   "name": "Calculator",
-  "description": "A pretty and simple calculator with units conversion.",
+  "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
   "icons": {
     "32": "/images/32.png",
@@ -18,8 +18,37 @@
   "installs_allowed_from": ["*"],
   "csp": "allow 'self'; object-src 'none'",
   "locales": {
+    "de": {
+      "name": "Rechner",
+      "description": "Ein wissenschaftlicher Rechner, einfach und effektiv, einschließlich Einheitenumrechner"
+    },
+    "el": {
+      "name": "Αριθμομηχανή",
+      "description": "Μια απλή και αποτελεσματική αριθμομηχανή, συμπεριλαμβανομένης της μετατροπής μονάδας."
+    },
+    "es": {
+      "name": "Calculadora",
+      "description": "Una calculadora bonita y simple con conversión de unidades de medida."
+    },
+    "eu": {
+      "name": "Kalkulagailua",
+      "description": "Kalkulagailu polita eta erraza bat, neurri-unitateen bihurketarekin."
+    },
     "fr": {
-      "description": "Une calculatrice jolie et simple"
+      "name": "Calculatrice",
+      "description": "Une calculatrice scientifique jolie et simple avec conversion des unités de mesure."
+    },
+    "it": {
+      "name": "Calcolatrice",
+      "description": "Una calcolatrice scientifica, piacevole e semplice, è compreso la conversione di unità di misura."
+    },
+    "no": {
+      "name": "Kalkulator",
+      "description": "En enkel og effektiv vitenskapelig kalkulator, med konvertering av enheter"
+    },
+    "ro": {
+      "name": "Calculator",
+      "description": "un calculator frumos și simplu cu conversie de unități de masura."
     }
   },
   "default_locale": "en"
