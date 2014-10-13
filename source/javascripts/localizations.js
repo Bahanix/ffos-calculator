@@ -1,8 +1,4 @@
 String.toLocaleString({
-  "en": {
-    "name": "Calculator",
-    "error": "Error"
-  },
   "cs": {
     "name": "Kalkulacka",
     "error": "Chyba"
@@ -18,6 +14,10 @@ String.toLocaleString({
   "el": {
     "name": "Αριθμομηχανή",
     "error": "Σφάλμα"
+  },
+  "en": {
+    "name": "Calculator",
+    "error": "Error"
   },
   "es": {
     "name": "Calculadora",
@@ -47,7 +47,7 @@ String.toLocaleString({
     "name": "Calcolatrice",
     "error": "Errore"
   },
-  "kr": {
+  "ko": {
     "name": "계산기",
     "error": "오류"
   },
@@ -55,11 +55,7 @@ String.toLocaleString({
     "name": "Калкулатор",
     "error": "Грешка"
   },
-  "nb": {
-    "name": "Kalkulator",
-    "error": "Feil"
-  },
-  "no": {
+  "nb-no": {
     "name": "Kalkulator",
     "error": "Feil"
   },
@@ -67,7 +63,7 @@ String.toLocaleString({
     "name": "Kalkulator",
     "error": "Błąd"
   },
-  "pt": {
+  "pt-br": {
     "name": "Calculadora",
     "error": "Erro"
   },
@@ -83,11 +79,15 @@ String.toLocaleString({
     "name": "Калькулятор",
     "error": "Помилка"
   },
-  "zh-CN": {
+  "vi": {
+    "name": "Máy tính",
+    "description": "Bảo loi"
+  },
+  "zh-cn": {
     "name": "计算器",
     "error": "错误"
   },
-  "zh-TW": {
+  "zh-tw": {
     "name": "計算器",
     "error": "錯誤"
   }
