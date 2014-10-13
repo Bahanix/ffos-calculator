@@ -3,6 +3,10 @@ String.toLocaleString({
     "name": "Calculator",
     "error": "Error"
   },
+  "cs": {
+    "name": "Kalkulacka",
+    "error": "Chyba"
+  },
   "da": {
     "name": "Lommeregner",
     "error": "Fejl"
@@ -31,6 +35,14 @@ String.toLocaleString({
     "name": "מחשבון",
     "error": "שגיאה"
   },
+  "hu": {
+    "name": "Számológép",
+    "error": "Hiba"
+  },
+  "id": {
+    "name": "Kalkulator",
+    "error": "Kesalahan"
+  },
   "it": {
     "name": "Calcolatrice",
     "error": "Errore"
@@ -42,6 +54,10 @@ String.toLocaleString({
   "mk": {
     "name": "Калкулатор",
     "error": "Грешка"
+  },
+  "nb": {
+    "name": "Kalkulator",
+    "error": "Feil"
   },
   "no": {
     "name": "Kalkulator",
@@ -66,5 +82,13 @@ String.toLocaleString({
   "uk": {
     "name": "Калькулятор",
     "error": "Помилка"
+  },
+  "zh-CN": {
+    "name": "计算器",
+    "error": "错误"
+  },
+  "zh-TW": {
+    "name": "計算器",
+    "error": "錯誤"
   }
 })
