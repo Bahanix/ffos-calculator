@@ -1,5 +1,5 @@
 {
-  "version": "0.7.14",
+  "version": "0.7.17",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -62,7 +62,7 @@
       "name": "Calcolatrice",
       "description": "Una calcolatrice scientifica, piacevole e semplice, è compreso la conversione di unità di misura."
     },
-    "kr": {
+    "ko": {
       "name": "계산기",
       "description": "단위 환산 기능을 갖는 간단하고 효과적인 계산기."
     },
@@ -70,25 +70,21 @@
       "name": "Калкулатор",
       "description": "Едноставен и симпатичен научен калкулатор со можност за промена на единици мерки."
     },
-    "nb": {
+    "nb-no": {
       "name": "Kalkulator",
-      "description": "En enkel og pen vitenskapelig kalkulator med enhetskonvertering."
-    },
-    "no": {
-      "name": "Kalkulator",
-      "description": "En enkel og effektiv vitenskapelig kalkulator, med konvertering av enheter."
+      "description": "En enkel og effektiv vitenskapelig kalkulator med konvertering av enheter."
     },
     "pl": {
       "name": "Kalkulator",
       "description": "Ładny i prosty kalkulator naukowy z przeliczaniem jednostek."
     },
-    "pt": {
+    "pt-br": {
       "name": "Calculadora",
       "description": "Uma calculadora científica bonita e simples com conversão de unidade de medidas."
     },
     "ro": {
       "name": "Calculator",
-      "description": "un calculator frumos și simplu cu conversie de unități de masura."
+      "description": "Un calculator frumos și simplu cu conversie de unități de masura."
     },
     "ru": {
       "name": "Калькулятор",
@@ -98,11 +94,15 @@
       "name": "Калькулятор",
       "description": "Калькулятор Гарний, простий у використанні науковий калькулятор з функцією конвертора одиниць вимірювання."
     },
-    "zh-CN": {
+    "vi": {
+      "name": "Máy tính",
+      "description": "Một máy tínhkhoa học để thường và đơn gian, với công nàng chuyên hoa nhưng đơn vì về đó đặc."
+    },
+    "zh-cn": {
       "name": "计算器",
       "description": "一个具备单位转换功能的简洁而又美观的科学计算器。"
     },
-    "zh-TW": {
+    "zh-tw": {
       "name": "計算器",
       "description": "一個具有單位轉換功能的簡潔而又美觀的科學計算器。"
     }
