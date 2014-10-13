@@ -1,4 +1,8 @@
 String.toLocaleString({
+  "ca": {
+    "name": "Calculadora",
+    "error": "Error"
+  },
   "cs": {
     "name": "Kalkulacka",
     "error": "Chyba"
@@ -74,6 +78,10 @@ String.toLocaleString({
   "ru": {
     "name": "Калькулятор",
     "error": "Ошибка"
+  },
+  "tr": {
+    "name": "Hesap makinesi",
+    "error": "Hata"
   },
   "uk": {
     "name": "Калькулятор",
