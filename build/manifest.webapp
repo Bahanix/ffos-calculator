@@ -1,5 +1,5 @@
 {
-  "version": "0.7.18",
+  "version": "0.7.19",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -94,13 +94,17 @@
       "name": "Калькулятор",
       "description": "Красивый, простой в использовании научный калькулятор с функцией конвертера единиц измерения."
     },
-    "uk": {
-      "name": "Калькулятор",
-      "description": "Калькулятор Гарний, простий у використанні науковий калькулятор з функцією конвертора одиниць вимірювання."
+    "sv": {
+      "name": "Miniräknare",
+      "description": "En vacker och enkel vetenskaplig miniräknare med enhetsomvandlare."
     },
     "tr": {
       "name": "Hesap makinesi",
       "description": "Birim dönüştürebilen, bilimsel ve güzel bir hesap makinesi."
+    },
+    "uk": {
+      "name": "Калькулятор",
+      "description": "Калькулятор Гарний, простий у використанні науковий калькулятор з функцією конвертора одиниць вимірювання."
     },
     "vi": {
       "name": "Máy tính",

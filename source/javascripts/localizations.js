@@ -79,6 +79,10 @@ String.toLocaleString({
     "name": "Калькулятор",
     "error": "Ошибка"
   },
+  "sv": {
+    "name": "Miniräknare",
+    "error": "Fel"
+  },
   "tr": {
     "name": "Hesap makinesi",
     "error": "Hata"
