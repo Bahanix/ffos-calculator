@@ -1,4 +1,8 @@
 String.toLocaleString({
+  "ar": {
+    "name": "حاسبة",
+    "error": "خطأ"
+  },
   "ca": {
     "name": "Calculadora",
     "error": "Error"
@@ -62,6 +66,10 @@ String.toLocaleString({
   "nb-no": {
     "name": "Kalkulator",
     "error": "Feil"
+  },
+  "nl": {
+    "name": "Rekenmachine",
+    "error": "Fout"
   },
   "pl": {
     "name": "Kalkulator",
