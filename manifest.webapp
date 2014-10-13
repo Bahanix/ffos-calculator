@@ -1,5 +1,5 @@
 {
-  "version": "0.7.17",
+  "version": "0.7.18",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -18,6 +18,10 @@
   "installs_allowed_from": ["*"],
   "csp": "allow 'self'; object-src 'none'",
   "locales": {
+    "ca": {
+      "name": "Calculadora",
+      "description": "Una calculadora simple i atractiva amb conversió d'unitats."
+    },
     "cs": {
       "name": "Kalkulacka",
       "description": "Hezka a jednoducha kalkulacka s prevodem jednotek."
@@ -93,6 +97,10 @@
     "uk": {
       "name": "Калькулятор",
       "description": "Калькулятор Гарний, простий у використанні науковий калькулятор з функцією конвертора одиниць вимірювання."
+    },
+    "tr": {
+      "name": "Hesap makinesi",
+      "description": "Birim dönüştürebilen, bilimsel ve güzel bir hesap makinesi."
     },
     "vi": {
       "name": "Máy tính",
