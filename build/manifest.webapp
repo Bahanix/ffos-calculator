@@ -1,5 +1,5 @@
 {
-  "version": "0.7.21",
+  "version": "0.7.22",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -69,6 +69,10 @@
     "it": {
       "name": "Calcolatrice",
       "description": "Una calcolatrice scientifica, piacevole e semplice, è compreso la conversione di unità di misura."
+    },
+    "ja": {
+      "name": "電卓",
+      "description": "この電卓には、簡潔さと美しさを両立するインターフェイスがある他、単位換算機能もが備わっている。"
     },
     "ko": {
       "name": "계산기",

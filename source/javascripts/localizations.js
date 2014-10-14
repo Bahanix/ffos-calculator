@@ -55,6 +55,10 @@ String.toLocaleString({
     "name": "Calcolatrice",
     "error": "Errore"
   },
+  "ja": {
+    "name": "電卓",
+    "error": "エラー"
+  },
   "ko": {
     "name": "계산기",
     "error": "오류"
