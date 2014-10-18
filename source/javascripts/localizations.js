@@ -63,6 +63,10 @@ String.toLocaleString({
     "name": "계산기",
     "error": "오류"
   },
+  "lv": {
+    "name": "Rēķinātajs",
+    "error": "Kļūda"
+  },
   "mk": {
     "name": "Калкулатор",
     "error": "Грешка"
