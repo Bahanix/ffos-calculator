@@ -9,6 +9,7 @@ $buttons = document.getElementById("buttons")
 $result = document.getElementById("result")
 
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
+units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F"]
 restart = null
 swiping = false
 history = []
@@ -38,6 +39,7 @@ compile = (string) ->
     replace(/÷/g, "/").
     replace(/√/g, "sqrt").
     replace(/π/g, "PI").
+    replace(/mod/g, "%").
     replace(/rand/g, "random()").
     replace(/dice/g, "ceil(6*random())").
     replace(/log/g, "log10").
@@ -51,8 +53,10 @@ doDigit = (button) ->
   history.push string
 
 doFunction = (button) ->
-  doClear() if restart
   string = button.textContent + "("
+  if restart
+    string += humanize(restart) + ")"
+    doClear()
   $expression.value += string
   history.push string
 
@@ -64,13 +68,17 @@ doSpace = ->
 
 getResult = ->
   string = humanize(restart)
+  string = "(" + string + ")" if restart.re and restart.im
+
   $expression.value = string
   history = [string]
   restart = null
 
 doUnit = (button) ->
   getResult() if restart
-  string = button.textContent + " "
+  string = button.textContent
+  if history[history.length - 1] in units
+    doBackspace()
   $expression.value += string
   history.push string
 
@@ -84,6 +92,7 @@ doOperator = (button) ->
 
 doClear = ->
   $expression.value = ""
+  $result.value = ""
   history = []
   restart = null
 
@@ -92,13 +101,22 @@ doBackspace = ->
   $expression.value = $expression.value.slice(0, 0 - last.length)
   restart = null
 
+fixParentheses = ->
+  open = ($expression.value.match(/\(/g) || []).length
+  close = ($expression.value.match(/\)/g) || []).length
+  for n in [0 ... open-close] by 1
+    $expression.value += ")"
+    history.push ")"
+
 doEqual = ->
-  try
-    result = math.eval compile($expression.value)
-    $result.value = humanize(result)
-    restart = result
-  catch
-    $result.value = 'error'.toLocaleString()
+  if $expression.value
+    try
+      fixParentheses()
+      result = math.eval compile($expression.value)
+      $result.value = humanize(result)
+      restart = result
+    catch
+      $result.value = 'error'.toLocaleString()
 
 $buttons.addEventListener "click", (e) ->
   return if swiping
