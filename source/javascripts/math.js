@@ -3137,6 +3137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var BASE_UNITS = {
 	  NONE: {},
 
+	  MONEY: {},                // eur
 	  LENGTH: {},               // meter
 	  MASS: {},                 // kilogram
 	  TIME: {},                 // second
@@ -3157,6 +3158,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var UNIT_NONE = {name: '', base: BASE_UNIT_NONE, value: 1, offset: 0};
 
 	var UNITS = {
+    // money
+    eur: {name: 'eur', base: BASE_UNITS.MONEY, prefixes: PREFIXES.NONE, value: 1, offset: 0},
+    usd: {name: 'usd', base: BASE_UNITS.MONEY, prefixes: PREFIXES.NONE, value: 0.77, offset: 0},
+
 	  // length
 	  meter: {name: 'meter', base: BASE_UNITS.LENGTH, prefixes: PREFIXES.LONG, value: 1, offset: 0},
 	  inch: {name: 'inch', base: BASE_UNITS.LENGTH, prefixes: PREFIXES.NONE, value: 0.0254, offset: 0},

@@ -33,18 +33,20 @@ humanize = (number) ->
 
 compile = (string) ->
   string.
-    replace(/→/g, "to").
     replace(/×/g, "*").
     replace(/−/g, "-").
     replace(/÷/g, "/").
-    replace(/√/g, "sqrt").
-    replace(/π/g, "PI").
     replace(/mod/g, "%").
-    replace(/rand/g, "random()").
-    replace(/dice/g, "ceil(6*random())").
-    replace(/log/g, "log10").
-    replace(/ln/g, "log").
-    replace(/°/g, "deg")
+    replace(/√/g, " sqrt").
+    replace(/log/g, " log10").
+    replace(/ln/g, " log").
+    replace(/rand/g, " random() ").
+    replace(/dice/g, " ceil(6*random()) ").
+    replace(/π/g, " PI ").
+    replace(/→/g, " to ").
+    replace(/€/g, " eur").
+    replace(/\$/g, " usd").
+    replace(/°/g, " deg")
 
 doDigit = (button) ->
   doClear() if restart
@@ -59,12 +61,6 @@ doFunction = (button) ->
     doClear()
   $expression.value += string
   history.push string
-
-doSpace = ->
-  string = " "
-  $expression.value += string
-  history.push string
-  restart = null
 
 getResult = ->
   string = humanize(restart)
@@ -128,8 +124,6 @@ $buttons.addEventListener event, (e) ->
       doDigit button
     when "button function"
       doFunction button
-    when "button space"
-      doSpace button
     when "button unit"
       doUnit button
     when "button operator"
