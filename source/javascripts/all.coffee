@@ -118,7 +118,9 @@ doEqual = ->
     catch
       $result.value = 'error'.toLocaleString()
 
-$buttons.addEventListener "click", (e) ->
+event = if 'ontouchend' in document.documentElement then 'touchend' else 'click'
+
+$buttons.addEventListener event, (e) ->
   return if swiping
   button = e.target
   switch e.target.className
