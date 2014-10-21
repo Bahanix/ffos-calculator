@@ -5,8 +5,8 @@ $expression = document.getElementById("expression")
 $buttons = document.getElementById("buttons")
 $result = document.getElementById("result")
 
-operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
-units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F"]
+operators = ["^", "/", "*", "-", "+", "×", "−", "÷",",","%","mod"]
+units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F", "€", "$"]
 restart = null
 ans = 0
 swiping = false
@@ -15,6 +15,8 @@ history = []
 humanize = (number) ->
   math.format(number, 6).toString().
     replace(/-/g, "−").
+    replace(/eur/g, "€").
+    replace(/usd/g, "$").
     replace(/deg/g, "°")
 
 compile = (string) ->
