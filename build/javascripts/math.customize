@@ -1,0 +1,22 @@
+(function() {
+  math.config({
+    number: 'bignumber'
+  });
+
+  math.sin.transform = function(a) {
+    if (a % math.pi === 0) {
+      return 0;
+    } else {
+      return math.sin(a);
+    }
+  };
+
+  math.divide.transform = function(a, b) {
+    if (b.toNumber() === 0) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.divide(a, b);
+    }
+  };
+
+}).call(this);
