@@ -1,7 +1,4 @@
-//= require idangerous.swiper.js
-//= require l10n
-//= require localizations
-//= require math
+//= require_tree ./lib
 //= require_tree .
 
 $expression = document.getElementById("expression")
@@ -13,18 +10,6 @@ units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", 
 restart = null
 swiping = false
 history = []
-
-document.title = 'name'.toLocaleString()
-document.documentElement.lang = String.locale || document.documentElement.lang
-
-mySwiper = new Swiper '.swiper-container',
-  loop: true,
-  moveStartThreshold: 32,
-  resistance: false,
-  onSlideChangeStart: ->
-    swiping = true
-  onSlideChangeEnd: ->
-    swiping = false
 
 humanize = (number) ->
   math.format(number, 6).toString().

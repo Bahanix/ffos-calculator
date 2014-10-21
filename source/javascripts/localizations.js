@@ -120,3 +120,6 @@ String.toLocaleString({
     "error": "錯誤"
   }
 })
+
+document.title = 'name'.toLocaleString()
+document.documentElement.lang = String.locale || document.documentElement.lang
