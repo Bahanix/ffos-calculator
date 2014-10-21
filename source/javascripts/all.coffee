@@ -8,6 +8,7 @@ $result = document.getElementById("result")
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",","]
 units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F"]
 restart = null
+ans = 0
 swiping = false
 history = []
 
@@ -25,8 +26,11 @@ compile = (string) ->
     replace(/√/g, " sqrt").
     replace(/log/g, " log10").
     replace(/ln/g, " log").
+    replace(/ans/g, " (" + ans + ") ").
     replace(/rand/g, " random() ").
-    replace(/dice/g, " ceil(6*random()) ").
+    replace(/([0-9]*)d([0-9]+)/g, (match, n, sides) ->
+      Array(parseInt(n || 1) + 1).join("ceil(" + sides + " * random()) +").slice(0,-1)
+    ).
     replace(/π/g, " PI ").
     replace(/→/g, " to ").
     replace(/€/g, " eur").
@@ -95,7 +99,7 @@ doEqual = ->
       fixParentheses()
       result = math.eval compile($expression.value)
       $result.value = humanize(result)
-      restart = result
+      ans = restart = result
     catch
       $result.value = 'error'.toLocaleString()
 

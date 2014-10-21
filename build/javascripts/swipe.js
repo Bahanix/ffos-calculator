@@ -1,1 +1,1 @@
-(function(){var n;n=new Swiper(".swiper-container",{loop:!0,moveStartThreshold:32,resistance:!1,onSlideChangeStart:function(){var n;return n=!0},onSlideChangeEnd:function(){var n;return n=!1}})}).call(this);
+(function(){var n;n=new Swiper(".swiper-container",{loop:!0,keyboardControl:!0,resistance:!1,onSlideChangeStart:function(){var n;return n=!0},onSlideChangeEnd:function(){var n;return n=!1}})}).call(this);
