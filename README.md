@@ -3,7 +3,7 @@
 * [Test the app on your browser](http://calculator.chatchan.us/)
 * [Install the app (Firefox Marketplace)](https://marketplace.firefox.com/app/ffos-calculator/)
 
-![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/full/153/153507.png)
+![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/full/154/154819.png)
 
 ## Tools
 
@@ -14,13 +14,25 @@
 ## TODO?
 
 * JS polishing
-* CSS polishing
-* Better app description
-* Better icons
+* UX polishing
+* Better currency exchange
 * Translations
+  * Български · bg · Bulgarian
+  * বাংলা (বাংলাদেশ) · bn-bd · Bengali
+  * हिन्दी ; हिंदी · hi · Hindi
+  * Hrvatski · hr · Croatian
+  * slovenčina · sk · Slovak
+  * Shqip · sq · Albanian
+  * Српски · sr · Serbian
 
 ## How to help
 
+As a translator:
+* [Take a look at existing translations](https://github.com/Bahanix/ffos-calculator/blob/master/source/manifest.webapp)
+* [Post your translation as an issue](https://github.com/Bahanix/ffos-calculator/issues)
+* I also need a translation of the word "Error"
+
+As a developer:
 * Fork
 * Do stuff
 * Pull request
