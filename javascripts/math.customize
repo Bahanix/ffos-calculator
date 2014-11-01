@@ -11,6 +11,14 @@
     }
   };
 
+  math.factorial.transform = function(a) {
+    if (a > 100000) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.factorial(a);
+    }
+  };
+
   math.divide.transform = function(a, b) {
     if (b.toNumber() === 0) {
       throw new math.error.ArgumentsError();
