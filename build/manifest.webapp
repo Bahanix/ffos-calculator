@@ -1,5 +1,5 @@
 {
-  "version": "0.10.10",
+  "version": "0.10.12",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -21,6 +21,10 @@
     "ar": {
       "name": "حاسبة",
       "description": "آلة حاسبة علمية لطيفة وبسيطة مع تحويل وحدات القياس"
+    },
+    "bn-bd": {
+      "name": "ক্যালকুলেটর",
+      "description": "সহজ ও সুন্দর একটা বৈজ্ঞানিক ক্যালকুলেটর যার ভেতর ইউনিটের অদলবদল করা যাবে"
     },
     "ca": {
       "name": "Calculadora",
@@ -57,6 +61,10 @@
     "he": {
       "name": "מחשבון",
       "description": "מחשבון מדעי יפה ופשוט עם המרה של יחידות"
+    },
+    "hi": {
+      "name": "कैलक्यूलेटर",
+      "description": "एक सुंदर और सरल वैज्ञानिक कैलकुलेटर, जो यूनिट/इकाई परिवर्तन में सक्षम"
     },
     "hu": {
       "name": "Számológép",

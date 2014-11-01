@@ -3,6 +3,10 @@ String.toLocaleString({
     "name": "حاسبة",
     "error": "خطأ"
   },
+  "bn-db": {
+    "name": "ক্যালকুলেটর",
+    "error": "ত্রুটি"
+  },
   "ca": {
     "name": "Calculadora",
     "error": "Error"
@@ -42,6 +46,10 @@ String.toLocaleString({
   "he": {
     "name": "מחשבון",
     "error": "שגיאה"
+  },
+  "hi": {
+    "name": "कैलक्यूलेटर",
+    "error": "ग़लती"
   },
   "hu": {
     "name": "Számológép",

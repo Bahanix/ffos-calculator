@@ -18,8 +18,6 @@
 * Better currency exchange
 * Translations
   * Български · bg · Bulgarian
-  * বাংলা (বাংলাদেশ) · bn-bd · Bengali
-  * हिन्दी ; हिंदी · hi · Hindi
   * Hrvatski · hr · Croatian
   * slovenčina · sk · Slovak
   * Shqip · sq · Albanian
