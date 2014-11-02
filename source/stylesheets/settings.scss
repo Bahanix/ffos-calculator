@@ -1,0 +1,41 @@
+#settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  .row.container {
+    background-color: #eee;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #close {
+    text-align: right;
+    cursor: pointer;
+  }
+
+  label {
+    line-height: 2rem;
+    padding-right: 0.5rem;
+  }
+
+  input {
+    background: transparent;
+    background-color: #fff;
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+
+  .postfix {
+    border: 1px solid #cccccc;
+    border-left: 0;
+  }
+}

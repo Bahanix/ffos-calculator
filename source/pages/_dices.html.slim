@@ -3,25 +3,25 @@
     .small-6.columns
       button.button.clear = "C"
     .small-3.columns
-      button.button.digit = "d4"
+      button.button.digit = "rand"
     .small-3.columns
-      button.button.digit = "d6"
+      button.button.operator = "×"
   .row.collapse
     .small-3.columns
-      button.button.digit = "7"
+      button.button.digit = "2"
     .small-3.columns
-      button.button.digit = "8"
-    .small-3.columns
-      button.button.digit = "9"
-    .small-3.columns
-      button.button.digit = "d8"
-  .row.collapse
+      button.button.digit = "3"
     .small-3.columns
       button.button.digit = "4"
     .small-3.columns
-      button.button.digit = "5"
+      button.button.operator = "−"
+  .row.collapse
     .small-3.columns
-      button.button.digit = "6"
+      button.button.digit = "d4"
+    .small-3.columns
+      button.button.digit = "d6"
+    .small-3.columns
+      button.button.digit = "d8"
     .small-3.columns
       button.button.operator = "+"
   .row.collapse.double
@@ -30,14 +30,14 @@
         .small-4.columns
           button.button.digit = "d10"
         .small-4.columns
-          button.button.digit = "2"
-        .small-4.columns
-          button.button.digit = "3"
-      .row.collapse.half
-        .small-4.columns
           button.button.digit = "d12"
         .small-4.columns
           button.button.digit = "d20"
+      .row.collapse.half
+        .small-4.columns
+          button.button.settings = image_tag 'settings.png', class: "settings"
+        .small-4.columns
+          button.button.digit = "d100"
         .small-4.columns
           button.button.backspace = "&#9003;"
     .small-3.columns.double

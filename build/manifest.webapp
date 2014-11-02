@@ -1,5 +1,5 @@
 {
-  "version": "0.10.12",
+  "version": "0.14.1",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",

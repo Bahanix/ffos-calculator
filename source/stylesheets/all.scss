@@ -1,5 +1,6 @@
 @import "foundation";
 @import "idangerous.swiper";
+@import "settings";
 
 .columns {
   height: 100%;
@@ -58,6 +59,9 @@
     width: 100%;
     height: 100%;
     padding: 0;
+    img {
+      height: 100%;
+    }
   }
   .button:active {
     background: #222;
