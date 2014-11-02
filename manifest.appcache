@@ -1,7 +1,8 @@
 CACHE MANIFEST
 
-# Version 0.10.12
+# Version 0.14.1
 
 /stylesheets/all.css
 /javascripts/all.js
+/images/settings.png
 /index.html
