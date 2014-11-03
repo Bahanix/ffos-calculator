@@ -111,8 +111,13 @@ event = if 'ontouchend' in document.documentElement then 'touchend' else 'click'
 
 $buttons.addEventListener event, (e) ->
   return if swiping
+
   button = e.target
   classes = button.className.split(" ")
+
+  if localStorage.getItem("vibration") == "true"
+    window.navigator.vibrate(50)
+
   switch classes[classes.length - 1]
     when "digit"
       doDigit button

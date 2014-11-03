@@ -17,21 +17,27 @@
   .row.container
     .row.collapse
       .small-11.columns
-        h1 Calculator
+        h1 Settings
       .small-1.columns
         h1#close &times;
     p
-      = "Report bugs, contribute, and/or read Calculator source code here: "
+      = "Report bugs, contribute, and/or read Calculator source code on "
       = link_to "Github", "https://github.com/Bahanix/ffos-calculator"
       = ". License: "
       = link_to "GPLv3", "https://www.gnu.org/copyleft/gpl.html"
       = "."
-    p
-      = "Work in progress (changing this value does not affect anything):"
-    .row.collapse
-      .small-2.columns
-        label.right for="rate" = "1 € = "
-      .small-9.columns
-        input#rate type="number" value="1.3"
-      .small-1.columns
-        .postfix $
+
+    form
+      .row.collapse
+        .small-3.columns
+          label.right for="vibration" = "Vibration"
+        .small-9.columns
+          input#vibration type="checkbox"
+
+      .row.collapse
+        .small-3.columns
+          label.right for="eur2usd" = "1 € = "
+        .small-8.columns
+          input#eur2usd type="number"
+        .small-1.columns
+          .postfix $
