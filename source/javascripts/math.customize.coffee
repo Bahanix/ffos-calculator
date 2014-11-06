@@ -13,9 +13,11 @@ setRates = (rates) ->
       value: 1 / rates[currency],
       offset: 0
 
-#window.rates = JSON.parse(localStorage.getItem("rates")) unless window.rates
-setRates window.rates if window.rates
-###
+if localStorage.getItem("rates")
+  window.rates = JSON.parse(localStorage.getItem("rates"))
+
+setRates window.rates
+
 request = new XMLHttpRequest({ mozSystem: true })
 request.open 'get', '/rates.json', true
 request.responseType = 'json'
@@ -26,7 +28,6 @@ request.addEventListener 'load', (data) ->
   localStorage.setItem("rates", JSON.stringify(window.rates))
   setRates(window.rates)
 request.send()
-###
 
 math.sin.transform = (a) ->
   if a % math.pi == 0
