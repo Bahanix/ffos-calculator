@@ -1,25 +1,47 @@
 (function() {
+  var setRates;
+
   math.config({
     number: 'bignumber'
   });
 
   math.type.Unit.BASE_UNITS.MONEY = {};
 
-  math.type.Unit.UNITS.usd = {
-    name: 'usd',
-    base: math.type.Unit.BASE_UNITS.MONEY,
-    prefixes: math.type.Unit.PREFIXES.NONE,
-    value: 1,
-    offset: 0
+  setRates = function(rates) {
+    var $currency, currency, _results;
+    _results = [];
+    for (currency in rates) {
+      if ($currency = document.getElementById(currency.toLowerCase())) {
+        $currency.value = rates[currency];
+      }
+      _results.push(math.type.Unit.UNITS[currency] = {
+        name: currency,
+        base: math.type.Unit.BASE_UNITS.MONEY,
+        prefixes: math.type.Unit.PREFIXES.NONE,
+        value: 1 / rates[currency],
+        offset: 0
+      });
+    }
+    return _results;
   };
 
-  math.type.Unit.UNITS.eur = {
-    name: 'eur',
-    base: math.type.Unit.BASE_UNITS.MONEY,
-    prefixes: math.type.Unit.PREFIXES.NONE,
-    value: 1.3,
-    offset: 0
-  };
+  if (window.rates) {
+    setRates(window.rates);
+  }
+
+
+  /*
+  request = new XMLHttpRequest({ mozSystem: true })
+  request.open 'get', '/rates.json', true
+  request.responseType = 'json'
+  request.addEventListener 'error', ->
+    console.log "Error XHR rates.json"
+  request.addEventListener 'load', (data) ->
+    window.rates = data.srcElement.response.rates
+    localStorage.setItem("rates", JSON.stringify(window.rates))
+    setRates(window.rates)
+  request.send()
+   */
 
   math.sin.transform = function(a) {
     if (a % math.pi === 0) {
