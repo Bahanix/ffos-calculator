@@ -10,6 +10,7 @@
   .swiper-wrapper
     .swiper-slide == partial "pages/base"
     .swiper-slide == partial "pages/units"
+    .swiper-slide == partial "pages/currencies"
     .swiper-slide == partial "pages/dices"
     .swiper-slide == partial "pages/arithmetic"
 
@@ -27,17 +28,19 @@
       = link_to "GPLv3", "https://www.gnu.org/copyleft/gpl.html"
       = "."
 
-    form
-      .row.collapse
-        .small-3.columns
-          label.right for="vibration" = "Vibration"
-        .small-9.columns
-          input#vibration type="checkbox"
+    p
+      label
+        input#vibration type="checkbox"
+        = " Vibration"
 
-      .row.collapse
-        .small-3.columns
-          label.right for="eur2usd" = "1 € = "
-        .small-8.columns
-          input#eur2usd type="number"
-        .small-1.columns
-          .postfix $
+    form
+      - %w[eur gbp chf jpy sgd cny aud cad hkd sek nok btc].each_slice(2) do |currency|
+        .row.collapse
+          .small-3.columns
+            input id=currency.first type="number"
+          .small-2.columns
+            .postfix = currency.first.upcase
+          .small-3.columns.small-offset-2
+            input id=currency.last type="number"
+          .small-2.columns
+            .postfix = currency.last.upcase

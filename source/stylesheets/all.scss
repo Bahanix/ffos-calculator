@@ -66,8 +66,12 @@
   .button:active {
     background: #222;
   }
+  &.currencies .unit {
+    font-size: 5vh;
+    line-height: 15vh;
+  }
+  &.base .digit {
+    background-color: #3d3d3d;
+  }
 }
 
-.base .digit {
-  background-color: #3d3d3d;
-}

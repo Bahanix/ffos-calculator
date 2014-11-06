@@ -3,11 +3,10 @@ $vibration.checked = localStorage.getItem("vibration") == "true"
 $vibration.onchange = ->
   localStorage.setItem "vibration", this.checked
 
-$eur2usd = document.getElementById("eur2usd")
-eur2usd = localStorage.getItem("eur2usd") || math.type.Unit.UNITS.eur.value
-$eur2usd.value = eur2usd
-math.type.Unit.UNITS.eur.value = eur2usd
+updateRate = ->
+  window.rates[this.id.toUpperCase()] = this.value
+  localStorage.setItem "rates", JSON.stringify(rates)
+  math.type.Unit.UNITS[this.id.toUpperCase()].value = 1 / this.value
 
-$eur2usd.onchange = ->
-  localStorage.setItem "eur2usd", this.value
-  math.type.Unit.UNITS.eur.value = this.value
+for currency in ["eur", "gbp", "chf", "jpy", "sgd", "cny", "aud", "cad", "hkd", "sek", "nok", "btc"]
+  document.getElementById(currency).onchange = updateRate

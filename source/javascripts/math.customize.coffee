@@ -2,19 +2,31 @@ math.config number: 'bignumber'
 
 math.type.Unit.BASE_UNITS.MONEY = {}
 
-math.type.Unit.UNITS.usd =
-  name: 'usd',
-  base: math.type.Unit.BASE_UNITS.MONEY,
-  prefixes: math.type.Unit.PREFIXES.NONE,
-  value: 1,
-  offset: 0
+setRates = (rates) ->
+  for currency of rates
+    if $currency = document.getElementById(currency.toLowerCase())
+      $currency.value = rates[currency]
+    math.type.Unit.UNITS[currency] =
+      name: currency,
+      base: math.type.Unit.BASE_UNITS.MONEY,
+      prefixes: math.type.Unit.PREFIXES.NONE,
+      value: 1 / rates[currency],
+      offset: 0
 
-math.type.Unit.UNITS.eur =
-  name: 'eur',
-  base: math.type.Unit.BASE_UNITS.MONEY,
-  prefixes: math.type.Unit.PREFIXES.NONE,
-  value: 1.3,
-  offset: 0
+#window.rates = JSON.parse(localStorage.getItem("rates")) unless window.rates
+setRates window.rates if window.rates
+###
+request = new XMLHttpRequest({ mozSystem: true })
+request.open 'get', '/rates.json', true
+request.responseType = 'json'
+request.addEventListener 'error', ->
+  console.log "Error XHR rates.json"
+request.addEventListener 'load', (data) ->
+  window.rates = data.srcElement.response.rates
+  localStorage.setItem("rates", JSON.stringify(window.rates))
+  setRates(window.rates)
+request.send()
+###
 
 math.sin.transform = (a) ->
   if a % math.pi == 0

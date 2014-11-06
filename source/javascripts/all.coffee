@@ -8,7 +8,7 @@ $buttons = document.getElementById("buttons")
 $result = document.getElementById("result")
 
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",",","%","mod"]
-units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F", "€", "$"]
+units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F"]
 restart = null
 ans = 0
 swiping = false
@@ -17,8 +17,6 @@ history = []
 humanize = (number) ->
   math.format(number, 6).toString().
     replace(/-/g, "−").
-    replace(/eur/g, "€").
-    replace(/usd/g, "$").
     replace(/deg/g, "°")
 
 compile = (string) ->
@@ -37,8 +35,6 @@ compile = (string) ->
     ).
     replace(/π/g, " PI ").
     replace(/→/g, " to ").
-    replace(/€/g, " eur").
-    replace(/\$/g, " usd").
     replace(/°/g, " deg")
 
 doDigit = (button) ->
@@ -65,7 +61,7 @@ getResult = ->
 
 doUnit = (button) ->
   getResult() if restart
-  string = button.textContent
+  string = " " + button.textContent
   if history[history.length - 1] in units
     doBackspace()
   $expression.value += string
