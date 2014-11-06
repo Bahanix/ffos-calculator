@@ -37,10 +37,10 @@
       - %w[eur gbp chf jpy sgd cny aud cad hkd sek nok btc].each_slice(2) do |currency|
         .row.collapse
           .small-3.columns
-            input id=currency.first type="number"
+            input id=currency.first type="number" step="any"
           .small-2.columns
             .postfix = currency.first.upcase
           .small-3.columns.small-offset-2
-            input id=currency.last type="number"
+            input id=currency.last type="number" step="any"
           .small-2.columns
             .postfix = currency.last.upcase
