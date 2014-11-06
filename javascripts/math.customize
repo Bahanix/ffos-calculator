@@ -1,5 +1,5 @@
 (function() {
-  var setRates;
+  var request, setRates;
 
   math.config({
     number: 'bignumber'
@@ -25,23 +25,31 @@
     return _results;
   };
 
-  if (window.rates) {
-    setRates(window.rates);
+  if (localStorage.getItem("rates")) {
+    window.rates = JSON.parse(localStorage.getItem("rates"));
   }
 
+  setRates(window.rates);
 
-  /*
-  request = new XMLHttpRequest({ mozSystem: true })
-  request.open 'get', '/rates.json', true
-  request.responseType = 'json'
-  request.addEventListener 'error', ->
-    console.log "Error XHR rates.json"
-  request.addEventListener 'load', (data) ->
-    window.rates = data.srcElement.response.rates
-    localStorage.setItem("rates", JSON.stringify(window.rates))
-    setRates(window.rates)
-  request.send()
-   */
+  request = new XMLHttpRequest({
+    mozSystem: true
+  });
+
+  request.open('get', '/rates.json', true);
+
+  request.responseType = 'json';
+
+  request.addEventListener('error', function() {
+    return console.log("Error XHR rates.json");
+  });
+
+  request.addEventListener('load', function(data) {
+    window.rates = data.srcElement.response.rates;
+    localStorage.setItem("rates", JSON.stringify(window.rates));
+    return setRates(window.rates);
+  });
+
+  request.send();
 
   math.sin.transform = function(a) {
     if (a % math.pi === 0) {
