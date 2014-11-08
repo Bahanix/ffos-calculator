@@ -20,20 +20,21 @@ body {
   .row {
     height: 50%;
   }
-  input {
-    background: transparent;
-    background-color: #eee;
+  .input {
+    background-color: #ddd;
     text-align: right;
-    font-size: 10vh;
+    font-size: 7vh;
+    line-height: 14vh;
     width: 100%;
     height: 100%;
     padding: 0;
     padding-right: 0.5rem;
+    border: 0;
   }
 }
 
-#expression {
-  border-bottom: 0;
+#result {
+  border-top: 1px #ccc solid;
 }
 
 .swiper-container {
@@ -58,20 +59,20 @@ body {
   .button {
     background: #333;
     border: 1px #222 solid;
-    font-size: 6vh;
+    font-size: 5vh;
     line-height: 14vh;
     width: 100%;
     height: 100%;
     padding: 0;
     img {
-      height: 100%;
+      height: 85%;
     }
   }
   .button:active {
     background: #222;
   }
   &.currencies .unit {
-    font-size: 5vh;
+    font-size: 4vh;
     line-height: 15vh;
   }
   &.base .digit {
