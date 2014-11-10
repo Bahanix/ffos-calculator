@@ -61,7 +61,7 @@ getResult = ->
 
 doUnit = (button) ->
   getResult() if restart
-  string = " " + button.textContent
+  string = " " + (button.getAttribute("value") || button.textContent)
   if history[history.length - 1] in units
     doBackspace()
   $expression.value += string
