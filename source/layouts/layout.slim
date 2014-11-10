@@ -16,4 +16,5 @@ html lang="en" dir="ltr" manifest="manifest.appcache"
 
   body class="#{page_classes}"
     == yield
+    == javascript_include_tag  "generated/rates"
     == javascript_include_tag  "all"

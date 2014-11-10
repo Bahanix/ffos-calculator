@@ -2,33 +2,6 @@ math.config number: 'bignumber'
 
 math.type.Unit.BASE_UNITS.MONEY = {}
 
-setRates = (rates) ->
-  for currency of rates
-    if $currency = document.getElementById(currency.toLowerCase())
-      $currency.value = rates[currency]
-    math.type.Unit.UNITS[currency] =
-      name: currency,
-      base: math.type.Unit.BASE_UNITS.MONEY,
-      prefixes: math.type.Unit.PREFIXES.NONE,
-      value: 1 / rates[currency],
-      offset: 0
-
-if localStorage.getItem("rates")
-  window.rates = JSON.parse(localStorage.getItem("rates"))
-
-setRates window.rates
-
-request = new XMLHttpRequest({ mozSystem: true })
-request.open 'get', '/rates.json', true
-request.responseType = 'json'
-request.addEventListener 'error', ->
-  console.log "Error XHR rates.json"
-request.addEventListener 'load', (data) ->
-  window.rates = data.srcElement.response.rates
-  localStorage.setItem("rates", JSON.stringify(window.rates))
-  setRates(window.rates)
-request.send()
-
 math.sin.transform = (a) ->
   if a % math.pi == 0
     0
@@ -46,3 +19,24 @@ math.divide.transform = (a, b) ->
     throw new math.error.ArgumentsError()
   else
     math.divide a, b
+
+# 1. Fill all inputs from settings pages
+# 2. Set all mathjs units
+# 3. Set rates in localstorage
+setRates = (rates) ->
+  for currency of rates
+    if $currency = document.getElementById(currency.toLowerCase())
+      $currency.value = rates[currency]
+    math.type.Unit.UNITS[currency] =
+      name: currency,
+      base: math.type.Unit.BASE_UNITS.MONEY,
+      prefixes: math.type.Unit.PREFIXES.NONE,
+      value: 1 / rates[currency],
+      offset: 0
+  localStorage.setItem "rates", JSON.stringify(rates)
+
+# If network is enabled, window.rates contains up to date rates yet
+if !window.rates && rates = localStorage.getItem("rates")
+  window.rates = JSON.parse(rates)
+
+setRates window.rates
