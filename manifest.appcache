@@ -1,11 +1,12 @@
 CACHE MANIFEST
 
-# Version 0.17.1
+# Version 0.18.2
 
+CACHE:
 /stylesheets/all.css
 /javascripts/all.js
 /images/settings.png
 /index.html
 
-FALLBACK:
-/rates.json /rates.json
+NETWORK:
+/javascripts/generated/rates.js
