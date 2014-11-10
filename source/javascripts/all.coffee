@@ -8,7 +8,8 @@ $buttons = document.getElementById("buttons")
 $result = document.getElementById("result")
 
 operators = ["^", "/", "*", "-", "+", "×", "−", "÷",",","%","mod"]
-units = ["m", "in", "ft", "mi", "L", "floz", "cp", "pt", "g", "kg", "oz", "lb", "K", "°C", "°F"]
+units = [" m", " in", " ft", " mi", " L", " floz", " cp", " pt", " g", " kg", " oz", " lb", " K", " °C", " °F"]
+currencies = [" JPY", " CNY", " EUR", " GBP", " CHF", " SGD", " USD", " AUD", " CAD", " HKD", " SEK", " NOK", " BTC"]
 restart = null
 ans = 0
 swiping = false
@@ -61,8 +62,16 @@ getResult = ->
 
 doUnit = (button) ->
   getResult() if restart
-  string = " " + (button.getAttribute("value") || button.textContent)
+  string = " " + button.textContent
   if history[history.length - 1] in units
+    doBackspace()
+  $expression.value += string
+  history.push string
+
+doCurrency = (button) ->
+  getResult() if restart
+  string = " " + button.getAttribute("value")
+  if history[history.length - 1] in currencies
     doBackspace()
   $expression.value += string
   history.push string
@@ -121,6 +130,8 @@ $buttons.addEventListener event, (e) ->
       doFunction button
     when "unit"
       doUnit button
+    when "currency"
+      doCurrency button
     when "operator"
       doOperator button
     when "clear"
