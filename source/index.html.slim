@@ -6,13 +6,22 @@
     .small-12.columns
       input#result.input type="text" disabled="disabled"
 
-#buttons.swiper-container
-  .swiper-wrapper
-    .swiper-slide == partial "pages/base"
-    .swiper-slide == partial "pages/units"
-    .swiper-slide == partial "pages/currencies"
-    .swiper-slide == partial "pages/dices"
-    .swiper-slide == partial "pages/arithmetic"
+#buttons
+  nav.row
+    .swiper-pagination-switch = "0−9"
+    .swiper-pagination-switch = "°C → °F"
+    .swiper-pagination-switch = "€ → $"
+    .swiper-pagination-switch = "rand"
+    .swiper-pagination-switch = "cos(π)"
+    .settings = image_tag 'settings.png', class: "settings"
+
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide == partial "pages/base"
+      .swiper-slide == partial "pages/units"
+      .swiper-slide == partial "pages/currencies"
+      .swiper-slide == partial "pages/dices"
+      .swiper-slide == partial "pages/arithmetic"
 
 #settings
   .row.container
@@ -26,7 +35,7 @@
       = link_to "Github", "https://github.com/Bahanix/ffos-calculator"
       = ". License: "
       = link_to "GPLv3", "https://www.gnu.org/copyleft/gpl.html"
-      = ". Installed version: 0.18.8"
+      = ". Installed version: 1.0.0"
 
     p
       label

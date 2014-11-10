@@ -4,19 +4,20 @@
 
 body {
   background-color: #eee;
+  font-family: 'Fira Sans', 'DejaVu Sans', sans-serif;
 }
 
 .columns {
   height: 100%;
   .button, input {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', 'DejaVu Sans', sans-serif;
     border-radius: 0;
     margin: 0;
   }
 }
 
 .display {
-  height: 30%;
+  height: 25%;
   .row {
     height: 50%;
   }
@@ -34,12 +35,37 @@ body {
   }
 }
 
+nav {
+  height: 8%;
+  background-color: #000;
+  .swiper-pagination-switch, div.settings {
+    color: #fff;
+    text-align: center;
+    font-size: 2vh;
+    line-height: 6vh;
+    height: 100%;
+    width: 16.66666%;
+    cursor: pointer;
+    float: left;
+  }
+  .swiper-active-switch {
+    color: #f80;
+  }
+  img {
+    height: 85%;
+  }
+}
+
 #result {
   border-top: 1px #ccc solid;
 }
 
+#buttons {
+  height: 75%;
+}
+
 .swiper-container {
-  height: 70%;
+  height: 92%;
 }
 
 .swiper-wrapper {
@@ -65,9 +91,6 @@ body {
     width: 100%;
     height: 100%;
     padding: 0;
-    img {
-      height: 85%;
-    }
     &.currency {
       font-size: 4vh;
       line-height: 13vh;

@@ -3,7 +3,7 @@
 * [Test the app on your browser](http://calculator.chatchan.us/)
 * [Install the app (Firefox Marketplace)](https://marketplace.firefox.com/app/ffos-calculator/)
 
-![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/full/155/155959.png)
+![Screenshot](https://marketplace.cdn.mozilla.net/img/uploads/previews/full/156/156673.png)
 
 ## Tools
 
@@ -24,15 +24,15 @@
 
 ## How to help
 
-As a translator:
-* [Take a look at existing translations](https://github.com/Bahanix/ffos-calculator/blob/master/source/manifest.webapp)
-* [Post your translation as an issue](https://github.com/Bahanix/ffos-calculator/issues)
-* I also need a translation of the word "Error"
-
 As a developer:
 * Fork
 * Do stuff
 * Pull request
+
+As a translator:
+* [Take a look at existing translations](https://github.com/Bahanix/ffos-calculator/blob/master/source/manifest.webapp)
+* [Post your translation as an issue](https://github.com/Bahanix/ffos-calculator/issues)
+* I also need a translation of the word "Error"
 
 Any help would be greatly appreciated!
 
