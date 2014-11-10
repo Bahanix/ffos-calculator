@@ -103,6 +103,14 @@ String.toLocaleString({
     "name": "Калькулятор",
     "error": "Ошибка"
   },
+  "sr": {
+    "name": "Калкулатор",
+    "error": "Грешка"
+  },
+  "sr-Latn": {
+    "name": "Kalkulator",
+    "error": "Greška"
+  },
   "sv": {
     "name": "Miniräknare",
     "error": "Fel"

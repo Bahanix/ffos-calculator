@@ -21,7 +21,6 @@
   * Hrvatski · hr · Croatian
   * slovenčina · sk · Slovak
   * Shqip · sq · Albanian
-  * Српски · sr · Serbian
 
 ## How to help
 
