@@ -117,31 +117,41 @@ event = if 'ontouchend' in document.documentElement then 'touchend' else 'click'
 $buttons.addEventListener event, (e) ->
   return if swiping
 
-  button = e.target
-  classes = button.className.split(" ")
-
   if localStorage.getItem("vibration") == "true"
     window.navigator.vibrate(50)
 
-  switch classes[classes.length - 1]
+  button = e.target
+  classes = button.className.split(" ")
+  lastClass = classes[classes.length - 1]
+
+  switch lastClass
     when "digit"
       doDigit button
+      break
     when "function"
       doFunction button
+      break
     when "unit"
       doUnit button
+      break
     when "currency"
       doCurrency button
+      break
     when "operator"
       doOperator button
+      break
     when "clear"
       doClear button
+      break
     when "backspace"
       doBackspace button
+      break
     when "equal"
       doEqual button
+      break
     when "settings"
       $settings.style.display = "block"
+      break
 
 $close.addEventListener event, (e) ->
   $settings.style.display = "none"
