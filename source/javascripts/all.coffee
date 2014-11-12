@@ -1,5 +1,5 @@
 //= require_tree ./lib
-//= require_tree .
+//= require_directory .
 
 $settings = document.getElementById("settings")
 $close = document.getElementById("close")
