@@ -18,10 +18,12 @@ history = []
 humanize = (number) ->
   math.format(number, 6).toString().
     replace(/-/g, "−").
+    replace(/Infinity/g, "∞").
     replace(/deg/g, "°")
 
 compile = (string) ->
   string.
+    replace(/∞/g, "Infinity").
     replace(/×/g, "*").
     replace(/−/g, "-").
     replace(/÷/g, "/").
