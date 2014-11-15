@@ -35,6 +35,22 @@
     }
   };
 
+  math.log.transform = function(a) {
+    if (math.zero(a)) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.log(a);
+    }
+  };
+
+  math.log10.transform = function(a) {
+    if (math.zero(a)) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.log10(a);
+    }
+  };
+
   setRates = function(rates) {
     var $currency, currency;
     for (currency in rates) {
