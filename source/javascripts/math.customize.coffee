@@ -14,8 +14,13 @@ math.factorial.transform = (a) ->
   else
     math.factorial a
 
+math.zero = (a) ->
+  (a.re == 0 && a.im == 0) ||
+  (a.value == 0) ||
+  (a instanceof math.type.BigNumber && a.toNumber() == 0)
+
 math.divide.transform = (a, b) ->
-  if b.toNumber() == 0
+  if math.zero b
     throw new math.error.ArgumentsError()
   else
     math.divide a, b
