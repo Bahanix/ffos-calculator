@@ -25,6 +25,18 @@ math.divide.transform = (a, b) ->
   else
     math.divide a, b
 
+math.log.transform = (a) ->
+  if math.zero a
+    throw new math.error.ArgumentsError()
+  else
+    math.log a
+
+math.log10.transform = (a) ->
+  if math.zero a
+    throw new math.error.ArgumentsError()
+  else
+    math.log10 a
+
 # 1. Fill all inputs from settings pages
 # 2. Set all mathjs units
 # 3. Set rates in localstorage
