@@ -19,11 +19,13 @@ humanize = (number) ->
   math.format(number, 6).toString().
     replace(/-/g, "−").
     replace(/Infinity/g, "∞").
+    replace(/i/g, "ⅈ").
     replace(/deg/g, "°")
 
 compile = (string) ->
   string.
-    replace(/∞/g, "Infinity").
+    replace(/ⅈ/g, " i ").
+    replace(/∞/g, " Infinity ").
     replace(/×/g, "*").
     replace(/−/g, "-").
     replace(/÷/g, "/").
