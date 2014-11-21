@@ -72,7 +72,7 @@ String.toLocaleString({
     "error": "오류"
   },
   "lv": {
-    "name": "Rēķinātajs",
+    "name": "Kalkulators",
     "error": "Kļūda"
   },
   "mk": {

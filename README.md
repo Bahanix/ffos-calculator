@@ -13,9 +13,12 @@
 
 ## TODO?
 
-* JS polishing
-* UX polishing for settings
-* More currency exchange
+* Degree and radian
+* Custom your currencies panel
+* Navbar to the right for horizontal view
+* Rewrite swiper?
+* No more foundation?
+* RPN?
 * Translations
   * Български · bg · Bulgarian
   * Hrvatski · hr · Croatian

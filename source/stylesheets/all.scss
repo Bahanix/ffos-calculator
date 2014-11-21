@@ -36,13 +36,13 @@ body {
 }
 
 nav {
-  height: 8%;
+  height: 10%;
   background-color: #000;
   .swiper-pagination-switch, div.settings {
     color: #fff;
     text-align: center;
-    font-size: 2vh;
-    line-height: 6vh;
+    font-size: 3vh;
+    line-height: 7.5vh;
     height: 100%;
     width: 16.66666%;
     cursor: pointer;
@@ -65,7 +65,7 @@ nav {
 }
 
 .swiper-container {
-  height: 92%;
+  height: 90%;
 }
 
 .swiper-wrapper {

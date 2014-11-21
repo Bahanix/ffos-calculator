@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.6",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
   "launch_path": "/index.html",
@@ -71,8 +71,8 @@
       "description": "Egy szép és egyszerű tudományos számológép, mértékegység átváltóval."
     },
     "lv": {
-      "name": "Rēķinātajs",
-      "description": "Vienkāršs zinatniskais rēķinātajs ar mērvienību pārveršanu"
+      "name": "Kalkulators",
+      "description": "Vienkāršs zinātnisks kalkulators ar mērvienību pārvēršanu"
     },
     "id": {
       "name": "Kalkulator",
