@@ -6,8 +6,9 @@ $close = document.getElementById("close")
 $expression = document.getElementById("expression")
 $buttons = document.getElementById("buttons")
 $result = document.getElementById("result")
+$to = document.getElementById("to")
 
-operators = ["^", "/", "*", "-", "+", "×", "−", "÷",",","%","mod"]
+operators = ["^", "/", "*", "-", "+", "×", "−", "÷",",","%","mod", " →"]
 units = [" m", " in", " ft", " mi", " L", " floz", " cp", " pt", " g", " kg", " oz", " lb", " K", " °C", " °F"]
 currencies = [" JPY", " CNY", " EUR", " GBP", " CHF", " SGD", " USD", " AUD", " CAD", " HKD", " SEK", " NOK", " BTC"]
 restart = null
@@ -66,7 +67,7 @@ doUnit = (button) ->
   getResult() if restart
   string = " " + button.textContent
   if history[history.length - 1] in units
-    doBackspace()
+    $to.click()
   $expression.value += string
   history.push string
 
@@ -74,7 +75,7 @@ doCurrency = (button) ->
   getResult() if restart
   string = " " + button.getAttribute("value")
   if history[history.length - 1] in currencies
-    doBackspace()
+    $to.click()
   $expression.value += string
   history.push string
 
