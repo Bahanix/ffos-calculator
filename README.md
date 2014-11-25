@@ -23,6 +23,7 @@
   * Български · bg · Bulgarian
   * Hrvatski · hr · Croatian
   * slovenčina · sk · Slovak
+  * Српски (Srpski) · sr-Cyrl, sr-Latn · Serbian
   * Shqip · sq · Albanian
 
 ## How to help
