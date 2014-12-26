@@ -1,20 +1,20 @@
 {
-  "version": "1.2.3",
+  "version": "1.2.4",
   "name": "Calculator",
   "description": "A pretty and simple scientific calculator with conversion of units.",
-  "launch_path": "/ffos-calculator/",
+  "launch_path": "/ffos-calculator/index.html",
   "icons": {
-    "32": "images/32.png",
-    "60": "images/60.png",
-    "64": "images/64.png",
-    "128": "images/128.png",
-    "256": "images/256.png"
+    "32": "/ffos-calculator/images/32.png",
+    "60": "/ffos-calculator/images/60.png",
+    "64": "/ffos-calculator/images/64.png",
+    "128": "/ffos-calculator/images/128.png",
+    "256": "/ffos-calculator/images/256.png"
   },
   "developer": {
     "name": "Julien Grillot",
     "url": "https://github.com/Bahanix/ffos-calculator"
   },
-  "appcache_path": "manifest.appcache",
+  "appcache_path": "/ffos-calculator/manifest.appcache",
   "installs_allowed_from": ["*"],
   "csp": "allow 'self'; object-src 'none'",
   "locales": {
