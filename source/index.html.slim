@@ -35,21 +35,9 @@
       = link_to "Github", "https://github.com/Bahanix/ffos-calculator"
       = ". License: "
       = link_to "GPLv3", "https://www.gnu.org/copyleft/gpl.html"
-      = ". Installed version: 1.1.5"
+      = ". Installed version: 1.2.8"
 
     p
       label
         input#vibration type="checkbox"
         = " Vibration"
-
-    form
-      - %w[eur gbp chf jpy sgd cny aud cad hkd sek nok btc].each_slice(2) do |currency|
-        .row.collapse
-          .small-3.columns
-            input id=currency.first type="number" step="any"
-          .small-2.columns
-            .postfix = currency.first.upcase
-          .small-3.columns.small-offset-2
-            input id=currency.last type="number" step="any"
-          .small-2.columns
-            .postfix = currency.last.upcase
