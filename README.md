@@ -41,10 +41,11 @@ Any help would be greatly appreciated!
 
 ## Dev
 
-* `git clone`
+* `git clone` and `cd` to your directory
+* `cp source/javascripts/generated/rates.js.sample source/javascripts/generated/rates.js`
 * `bundle install` to install dependencies
-* `middleman server` to test the app in your browser
-* `middleman build` to compile everything
+* `bundle exec middleman server` to test the app in your browser
+* `bundle exec middleman build` to compile everything
 
 ## Test with your device or simulator
 
